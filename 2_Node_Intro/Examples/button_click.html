@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h2>Hello</h2>
+    <button type="button" name="Button" id="countButton">Click</button>
+
+    <script>
+
+    // create a (function () {}()); to create a new scope
+    // immediately invokable function
+    (function() {
+      var clickCount = 0;
+      document.getElementById("countButton").onclick = function() {
+        clickCount += 1;
+        alert("clicked " + clickCount + " times.");
+      };
+    }());
+    </script>
+  </body>
+</html>
