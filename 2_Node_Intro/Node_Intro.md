@@ -17,6 +17,54 @@
   * Have to use synchronization primitives like locks and semaphores to synchronize access to some data structures
   * **If the application relies heavily on a shared state threads, this type of programming can easily lead to strange bugs and difficult to debug**
 
+## **Event-Driven Programming**
+* Flow of execution is determined by the events
+* Events are handled by event handlers or event callbacks
+* **Event Callback** is a function that is invoked when something significant happens like
+  * when a user clicks on a button
+  * when the result of a DB query is available
+  * when the response to external request is available
+
+* In typical blocking I/O Programming (below), current thread or process wait until the database layer finishes processing it
+```
+res = query('SELECT * FROM USERS WHERE USER_ID = 100');
+doSomethingWith(res);
+```
+* In Asynchronous Programming
+```
+queryFinished = function(res) {
+    doSomethingWith(res);
+}
+query('SELECT * FROM USERS WHERE USER_ID = 100',queryFinished);
+```
+
+* The style of programming - whereby instead of using a return value, we define functions that are called by the system when interesting events occur is called ***event-driven or asynchronous programming***
+
+* This is one of the defining features of Node
+
+* Current process will not block when it is doing I/O. Hence, several I/O operations can occur parallel and each respective callback will be invoked when operation finishes.
+
+### Event Loop
+
+* Event-Driven programming style is accompanied by an event loop
+
+* construct that mainly performs two functions in a continuous loop
+  1. event detection
+  2. event handler triggering
+
+* Event Loop is just one thread running inside one process
+
+* Simple visual representation of event loop
+![Event Loop](eventloop.png)
+
+* Event loop representation with more details
+
+![Event Loop With Details](eventloop_with_details.png)
+
+* **Event-Driven programming is the best way to create a service that can handle many concurrent connections**
+
+* This is more efficient reg memory as less context to store and more efficient req time as less context switching
+
 
 
 
