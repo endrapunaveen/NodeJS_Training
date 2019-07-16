@@ -65,18 +65,18 @@ query('SELECT * FROM USERS WHERE USER_ID = 100',queryFinished);
 
 * This is more efficient reg memory as less context to store and more efficient req time as less context switching
 
-* *Javascript has closures and first-class functions, which makes a powerful match for event-driven programming*
+* *JavaScript has closures and first-class functions, which makes a powerful match for event-driven programming*
 
 ### Closures
 * Closures are functions that inherit variables from their enclosing environment
 
 * This powerful feature is at the heart of Node's success
 
-* In Javascript, functions are first-class objects - which means we can pass functions as arguments to other functions
+* In JavaScript, functions are first-class objects - which means we can pass functions as arguments to other functions
 
-* In Javascript, a function operates not by working in isolation but by remembering the context where it was declared, which enables manipulation of any variable present in that or ay parent context
+* In JavaScript, a function operates not by working in isolation but by remembering the context where it was declared, which enables manipulation of any variable present in that or ay parent context
 
-* Closure pattern helps us in doing event-driven programming without having to maintain the state by passing it around to functions. Javascript Closure keeps the state for us.
+* Closure pattern helps us in doing event-driven programming without having to maintain the state by passing it around to functions. JavaScript Closure keeps the state for us.
 
 
 <br>
@@ -94,3 +94,7 @@ query('SELECT * FROM USERS WHERE USER_ID = 100',queryFinished);
 
 **I/O-bound activities**
 * I/O-bound activities are tasks mainly limited by I/O resources, such as network I/O or file I/O. I/O-bound activities often take place when tasks operates on external data that is not (yet) part of its own memory. In case of our architectural model, this includes access to most platform components, including storage backends, background services and external services.
+
+## Further Reading Links
+* https://www.journaldev.com/7462/node-js-architecture-single-threaded-event-loop
+* https://www.youtube.com/watch?v=8aGhZQkoFbQ
