@@ -1,14 +1,14 @@
 # 1. Installing Node
 ## What is Node?
 * Introduced at European JSConf in 2009
-* Platform built on Google's V8 Javascript engine, an event library for asynchronous, non blocking operations
-* It provides a lightweight environment for event-driven programming in Javascript, using I/O model
+* Platform built on Google's V8 JavaScript engine, an event library for asynchronous, non blocking operations
+* It provides a lightweight environment for event-driven programming in JavaScript, using I/O model
 
 ***Node allows us to easily construct fast and scalable network services***
 
 ## Why Node is so popular?
 
-* Javascript the most widely used programming language. Most web programmers are used to writing Javascript in the browser, and the server is a natural extension of that.
+* JavaScript the most widely used programming language. Most web programmers are used to writing JavaScript in the browser, and the server is a natural extension of that.
 
 * Simplicity of Node.
   * Node's core functionalities are kept to minimum
@@ -69,7 +69,7 @@ undefined
 
 ```
 
-**Run Javascript file**
+**Run JavaScript file**
 ```
 node welcome.js
 Welcome to Node world!!!
